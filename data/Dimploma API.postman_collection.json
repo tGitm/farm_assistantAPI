@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "c44c7da9-3545-4000-9523-3f8f278bca45",
+		"name": "Dimploma API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14129257"
+	},
+	"item": [
+		{
+			"name": "register user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Tim\",\r\n    \"last_name\": \"Rus\",\r\n    \"email\": \"timrus.dev@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Dev\",\r\n    \"last_name\": \"Tim\",\r\n    \"email\": \"dev.tim@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"timrus.dev@gmail.com\",\r\n    \"password\": \"tim123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWorlkist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdjZWYwNTM5NGVhNWU5MDk0OGViODUiLCJpYXQiOjE2NTIzNjAwMTd9.yjY5ImfI5XQpNnfeKn-IzEUyWxe604Rt8FLPJylbPDg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/worklist/getData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"worklist",
+						"getData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add worklist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmMxNjY0NDUwOWU4MDJiOGI0ODM4NDQiLCJpYXQiOjE2NTY4NDIxNzd9.MAoMgbd5Ou2OzehobS3esJdXeWef7tTfz6atyqSpQRI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Tim\",\r\n    \"last_name\": \"Rus\",\r\n    \"email\": \"timrus1.dev@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/worklist/add-land-work",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"worklist",
+						"add-land-work"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

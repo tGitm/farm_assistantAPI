@@ -1,21 +1,39 @@
 const mongoose = require('mongoose');
 
-const worklistSchema = new mongoose.Schema({
-    work_title: {
-        type: String,
-        required: true,
+const WorklistSchema = new mongoose.Schema(
+    {
+        user_id: {
+            type: String,
+            required: true
+        },
+        land_id: {
+            type: String,
+            required: true
+        },
+        work_title: {
+            type: String,
+            required: true,
+        },
+        work_description: {
+            type: String,
+        },
+        accessories_used: {
+            type: String,
+        },
+        date: {
+            type: Date,
+            default: Date.now
+        },
+        img: {
+          type: String,
+        }
+        /*added_by_user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        },*/
     },
-    work_description: {
-        type: String,
-    },
-    accessories_used: {
-        type: String,
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    }
-    // rad bi dodal id userja (da shranim kater user je dodal work na worklist)
-});
+    { timestamps: true }
+);
 
-module.exports = mongoose.model('Worklist', worklistSchema);
+const Worklist = mongoose.model("Worklist", WorklistSchema);
+module.exports = Worklist;

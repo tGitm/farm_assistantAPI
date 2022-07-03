@@ -20,10 +20,10 @@ const WorklistSchema = new mongoose.Schema(
         accessories_used: {
             type: String,
         },
-        date: {
+        /*date: {
             type: Date,
             default: Date.now
-        },
+        },*/
         img: {
           type: String,
         }

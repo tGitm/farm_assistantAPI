@@ -9,6 +9,7 @@ router.post('/add-land-work', verify, async (req, res, next) => {
     const newWork = new Worklist(req.body);
     try {
         const savedWork = await newWork.save();
+        res.send({worklist_id: newWork._id})
         res.status(200).json(savedWork);
     } catch(e) {
         res.status(500).json(e);

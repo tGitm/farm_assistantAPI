@@ -4,8 +4,8 @@ const app = express();
 const mongoose = require('mongoose');
 
 // Importing routes
-const getWorklistRoute = require('./routes/Worklist/getPlotWorklist');
-const addWorklistRoute = require('./routes/Worklist/addPlotWorklist');
+const getWorklistRoute = require('./routes/Worklist/getPlotChores');
+const addWorklistRoute = require('./routes/Worklist/addPlotChores');
 const authRoute = require('./routes/auth');
 const getLand = require('./routes/getLand');
 

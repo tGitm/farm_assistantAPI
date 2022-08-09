@@ -25,12 +25,6 @@ const userSchema = new mongoose.Schema({
         maxLength: 1024,
         minLength: 6
     },
-    phone: {
-        type: Number,
-        required: true,
-        minLength: 8,
-        maxLength: 20
-    },
     gerkMID: {
         type: String,
         required: true

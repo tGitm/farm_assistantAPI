@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const verify = require('../verifyToken');
-const Worklist = require('../../model/Worklist')
+const Worklist = require('../../model/Chores')
 
 // Cant post if user is not verified
 

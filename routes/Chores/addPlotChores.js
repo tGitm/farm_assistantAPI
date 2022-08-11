@@ -5,7 +5,7 @@ const Worklist = require('../../model/Chores')
 // Cant post if user is not verified
 
 // add new work on land
-router.post('/add-land-work', verify, async (req, res, next) => {
+router.post('/add-chore', verify, async (req, res, next) => {
     const newWork = new Worklist(req.body);
     try {
         const savedWork = await newWork.save();

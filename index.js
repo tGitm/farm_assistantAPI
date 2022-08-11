@@ -4,10 +4,11 @@ const app = express();
 const mongoose = require('mongoose');
 
 // Importing routes
-const getWorklistRoute = require('./routes/Worklist/getPlotChores');
-const addWorklistRoute = require('./routes/Worklist/addPlotChores');
+const getChoreRoute = require('./routes/Chores/getPlotChores');
+const addChoreRoute = require('./routes/Chores/addPlotChores');
 const authRoute = require('./routes/auth');
 const getLand = require('./routes/getLand');
+const userActions = require('./routes/userAccount')
 
 // Connect to MongoDB
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
@@ -19,9 +20,10 @@ app.use(express.json()); // now we can send post request
 
 // Router Middlewares
 app.use('/api/user', authRoute);
-app.use('/api/worklist', getWorklistRoute);
-app.use('/api/worklist', addWorklistRoute);
-app.use('/api/', getLand);
+app.use('/api/user', userActions);
+app.use('/api/chore', getChoreRoute);
+app.use('/api/chore', addChoreRoute);
+app.use('/api', getLand);
 
 
 app.listen(3000, () => {

@@ -35,5 +35,5 @@ const WorklistSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-const Worklist = mongoose.model("Worklist", WorklistSchema);
+const Worklist = mongoose.model("Chores", WorklistSchema);
 module.exports = Worklist;

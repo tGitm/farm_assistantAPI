@@ -14,8 +14,8 @@ router.get("/:id", async (req, res) => {
 });
 
 // UPDATE USER
-router.post("/edit/:id", async (req, res) => {
-    if (req.body.userId === req.params.id) {
+router.put("/edit/:id", async (req, res) => {
+    //if (req.body.userId === req.params.id) {
         try {
             if (req.body.password) {
                 try {
@@ -29,14 +29,15 @@ router.post("/edit/:id", async (req, res) => {
             const conditions = {_id: req.params.id};
             const updatedUser = req.body;
 
-            const user = await User.findByIdAndUpdate(conditions, updatedUser);
+            const user = await User.findByIdAndUpdate(conditions, updatedUser, { new: true });
+            console.log('user: ' + user);
 
             res.send(user);
             res.status(200).json(user);
         } catch (err) {
             return res.status(500).json(err);
         }
-    }
+    //}
 });
 
 module.exports = router;

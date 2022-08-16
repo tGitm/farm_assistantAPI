@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
         minLength: 6
     },
     gerkMID: {
-        type: String,
+        type: Number,
         required: true
     },
     date: {

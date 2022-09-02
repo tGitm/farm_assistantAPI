@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "build": "npm install"
   },
   "keywords": [],
@@ -19,6 +19,9 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.5.2",
     "mysql": "^2.18.1"
+  },
+  "engines": {
+    "node": "16.15.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"

@@ -27,5 +27,5 @@ app.use('/api', getLand);
 
 
 app.listen(3000, () => {
-    console.log('Server up & running on PORT: 3000');
+    console.log('API up & running on PORT: 3000');
 })

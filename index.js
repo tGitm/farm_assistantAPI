@@ -32,6 +32,7 @@ app.get("/", (req, res) => {
 // used for generating secret jwt token
 // console.log(require('crypto').randomBytes(64).toString('hex'))
 
-app.listen(3000, () => {
+let port = process.env.PORT || 3000
+app.listen(port, () => {
     console.log('API up & running on PORT: 3000');
 });

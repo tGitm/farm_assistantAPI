@@ -29,6 +29,9 @@ app.get("/", (req, res) => {
    res.send("Farmlog API");
 });
 
+// used for generating secret jwt token
+// console.log(require('crypto').randomBytes(64).toString('hex'))
+
 app.listen(3000, () => {
     console.log('API up & running on PORT: 3000');
 });

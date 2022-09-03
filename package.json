@@ -18,12 +18,10 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.5.2",
+    "nodemon": "^2.0.16",
     "mysql": "^2.18.1"
   },
   "engines": {
     "node": "16.15.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.16"
   }
 }

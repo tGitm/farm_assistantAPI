@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const verify = require('./verifyToken');
-const Land = require('../model/land');
+const Land = require('../model/Land');
 const { result } = require('lodash');
 
 // Cant acces if user is not verifyed

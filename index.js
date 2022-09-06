@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const getChoreRoute = require('./routes/Chores/getPlotChores');
 const addChoreRoute = require('./routes/Chores/addPlotChores');
 const authRoute = require('./routes/auth');
-const getLand = require('./routes/getLand');
+const getLand = require('./routes/Lands/getLand');
 const userActions = require('./routes/userAccount')
 
 // Connect to MongoDB

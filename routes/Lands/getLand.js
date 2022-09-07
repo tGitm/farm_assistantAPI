@@ -2,7 +2,7 @@ const router = require('express').Router();
 const verify = require('../verifyToken');
 
 //const mongoose = require('../../db.js')
-//const Land = require('../../model/Land.js')
+const Land = require('../../model/Land.js')
 
 // const mongoURL = process.env.DB_CONNECT;
 

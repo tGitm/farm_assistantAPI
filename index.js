@@ -1,9 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 
-
-//test
 
 // Importing routes
 const getChoreRoute = require('./routes/Chores/getPlotChores');
@@ -12,6 +11,10 @@ const authRoute = require('./routes/auth');
 const getLand = require('./routes/Lands/getLand');
 const userActions = require('./routes/userAccount')
 
+// Connect to MongoDB
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
+    console.log('Connected to DB!') }
+);
 
 // MiddleWare
 app.use(express.json()); // now we can send post request

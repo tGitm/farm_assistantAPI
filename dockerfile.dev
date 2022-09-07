@@ -1,0 +1,14 @@
+FROM node:16
+
+ENV env=development
+ENV node_env=development
+
+WORKDIR /var/api
+
+COPY package.json package-lock.json ./
+
+RUN npm i
+
+COPY . .
+
+CMD ["npm", "run", "dev"]

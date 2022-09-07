@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "627cef05394ea5e90948eb85"
+  },
+  "first_name": "Tim",
+  "last_name": "Rus",
+  "email": "timrus.dev@gmail.com",
+  "password": "$2b$10$vPgbmFQ8CjX88TK/5y7S3.Tc2VXZ8WC/OHI03p16z1j9vAlWoFA1u",
+  "phone": 70070070,
+  "gerkMID": "100328401",
+  "date": {
+    "$date": {
+      "$numberLong": "1652354821506"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "627cef742d61600bb620c89e"
+  },
+  "first_name": "Dev",
+  "last_name": "Tim",
+  "email": "dev.tim@gmail.com",
+  "password": "$2b$10$7nCZWlSlHXeeMxECLwdGVOlJI/.RIe9sm7jvOxxbDcYJFSDIdP/ae",
+  "phone": 70070070,
+  "gerkMID": "100328401",
+  "date": {
+    "$date": {
+      "$numberLong": "1652354932978"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c16644509e802b8b483844"
+  },
+  "first_name": "Tim",
+  "last_name": "Rus",
+  "email": "timrus1.dev@gmail.com",
+  "password": "$2b$10$vaOyFZmUF1PvwyO/4vGMwupKGjceh5okJAoSNaNxx1Zxm.6zNolAC",
+  "phone": 70070070,
+  "gerkMID": "100328401",
+  "date": {
+    "$date": {
+      "$numberLong": "1656841796773"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f3ba4934d28cae285d6062"
+  },
+  "first_name": "Tim",
+  "last_name": "Rus",
+  "email": "tim.rus@mesimedical.com",
+  "password": "$2b$10$onet0rN9/WXpxC5PNsQE6.TUMTBtOSx1RnH/Fz045/CPKcNTyhVOm",
+  "gerkMID": "12345676958",
+  "date": {
+    "$date": {
+      "$numberLong": "1660140105922"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fbaeeb559213f7321ca3c1"
+  },
+  "first_name": "Laura",
+  "last_name": "Srpčič",
+  "email": "laurasrpcic@gmail.com",
+  "password": "$2b$10$5pAaywoT04r.f5DL3ttZ7uXwg.0fleeQ9ixKsq/TxzcISOSH0RFFq",
+  "gerkMID": "100323701",
+  "date": {
+    "$date": {
+      "$numberLong": "1660661483482"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63135ad8ecf1da3d0d62cc25"
+  },
+  "first_name": "Tim",
+  "last_name": "Rus",
+  "email": "timr@gmail.com",
+  "password": "$2b$10$9dKgMdO7.vhXmIGU/Qxw5eOWAWcFgcVTaTv829f4C3jQCaa1JYm0.",
+  "gerkMID": 100328401,
+  "date": {
+    "$date": {
+      "$numberLong": "1662212824091"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "631388dc415addb627b4b2ba"
+  },
+  "first_name": "Laura",
+  "last_name": "Srpčič",
+  "email": "laurasrpcic1@gmail.com",
+  "password": "$2b$10$lPPjFJeAUgy.JWJ7Cps3aOul7xxnPEelkzV4ZO3J6N6LypxpoG/Na",
+  "gerkMID": {
+    "$numberLong": "10032840111"
+  },
+  "date": {
+    "$date": {
+      "$numberLong": "1662224604480"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63145ca50c53de82298c6534"
+  },
+  "first_name": "Laura1",
+  "last_name": "Srpčič",
+  "email": "laurasrpcic12@gmail.com",
+  "password": "$2b$10$DlYF2bhH8vkXnEBqX8CR8uFKE6f07SVACJR8LZdQDlQaRblpb71Hq",
+  "gerkMID": {
+    "$numberLong": "10032840111"
+  },
+  "date": {
+    "$date": {
+      "$numberLong": "1662278821395"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63147996069e8cb2dcc82319"
+  },
+  "first_name": "Tim",
+  "last_name": "Rus",
+  "email": "timrus99@gmail.com",
+  "password": "$2b$10$Wqfink1UtUigwuXfNce.JuuMhfYS9D2fcBXSq4KtvP.zEWrlX/mES",
+  "gerkMID": 12345,
+  "date": {
+    "$date": {
+      "$numberLong": "1662286230890"
+    }
+  },
+  "__v": 0
+}]

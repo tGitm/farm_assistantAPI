@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "62f3dcdc5edae24a51f36516"
+  },
+  "user_id": "62f3ba4934d28cae285d6062",
+  "land_id": "12345233467890",
+  "work_title": "Košnja",
+  "work_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "accessories_used": "Lorem Ipsum 123547890",
+  "img": "kosilnica.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660148956290"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660148956290"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fbaf462b671d58020c9517"
+  },
+  "user_id": "62fbaeeb559213f7321ca3c1",
+  "land_id": "123456",
+  "work_title": "Štihanje",
+  "work_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "accessories_used": "Lorem Ipsum 123547890",
+  "img": "lopata.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660661574611"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660661574611"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fbaf79cf36f31c9ead8070"
+  },
+  "user_id": "62fbaeeb559213f7321ca3c1",
+  "land_id": "123456",
+  "work_title": "Obiranje breskev",
+  "work_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "accessories_used": "Lorem Ipsum 123547890",
+  "img": "lojtra.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660661625475"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660661625475"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63137190a317770eeee0a81c"
+  },
+  "user_id": "63135ad8ecf1da3d0d62cc25",
+  "land_id": "123456",
+  "work_title": "Obiranje jabolk",
+  "work_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "accessories_used": "Lorem Ipsum 123547890",
+  "img": "traktor.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662218641001"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662218641001"
+    }
+  },
+  "__v": 0
+}]

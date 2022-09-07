@@ -32,7 +32,18 @@ const landSchema = new mongoose.Schema(
         },
         geometry: {
             type: { type: String, required: true },
-            coordinates: { type: Array, required: true, default: [] }
+            coordinates: [ 
+                [
+                    [
+                        [
+                            {type: Number},
+                            {type: Number}
+                        ]
+                        
+                    ]
+                ]
+                
+            ]
         }
 
     },

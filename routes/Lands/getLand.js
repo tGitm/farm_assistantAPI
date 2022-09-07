@@ -28,10 +28,7 @@ router.get('/get-lands', async (req, res) => {
 router.get('/get-geometry/:id', async (req, res) => {
     // console.log("req.params.id", typeof parseInt(req.params.id));
 
-    const result = await Land.find(
-        {properties: {KMG_MID: parseInt(req.params.id)}},
-        {geometry: 1}
-    )
+    const result = await Land.find({'properties.KMG_MID': parseInt(req.params.id)})
     
     if (!result) return res.status(500).send({ok: false})
     return res.send({ok: true, data: result})

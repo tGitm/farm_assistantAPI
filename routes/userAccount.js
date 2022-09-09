@@ -40,4 +40,17 @@ router.put("/edit/:id", async (req, res) => {
     //}
 });
 
+// UPDATE PASSWORD
+router.put("/edit/password/:id", async (req, res) => {
+    try {
+        const salt = await bcrypt.genSalt(10);
+        const newPassword = await bcrypt.hash(req.body.password, salt);
+
+        const user = await User.findByIdAndUpdate({_id: req.params.id}, ({password: newPassword},{ $set: req.body }), { new: true })
+        res.status(200).json('Pasword was updated successfully');
+    } catch (err) {
+        return res.status(500).json(err);
+    }
+});
+
 module.exports = router;

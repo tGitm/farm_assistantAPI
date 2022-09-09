@@ -25,6 +25,9 @@ const userSchema = new mongoose.Schema({
         maxLength: 1024,
         minLength: 6
     },
+    address: {
+      type: String
+    },
     post: {
         type: String
     },

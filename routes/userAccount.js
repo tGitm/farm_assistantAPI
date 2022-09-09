@@ -32,7 +32,6 @@ router.put("/edit/:id", async (req, res) => {
             const user = await User.findByIdAndUpdate(conditions, updatedUser, { new: true });
             console.log('user: ' + user);
 
-
             res.send(user);
             res.status(200).json(user);
         } catch (err) {

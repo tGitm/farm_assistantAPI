@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
     post: {
         type: String
     },
-    postalCode: {
+    postal_code: {
       type: String
     },
     gerkMID: {

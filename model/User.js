@@ -25,6 +25,12 @@ const userSchema = new mongoose.Schema({
         maxLength: 1024,
         minLength: 6
     },
+    post: {
+        type: String
+    },
+    postalCode: {
+      type: Number
+    },
     gerkMID: {
         type: Number,
         required: true

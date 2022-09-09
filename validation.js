@@ -7,7 +7,9 @@ const registerValidation = (data) => {
         last_name: Joi.string().min(2).required(),
         email: Joi.string().min(6).required().email(),
         password: Joi.string().min(6).required(),
-        phone: Joi.string().min(9),
+        address: Joi.string(),
+        post: Joi.string(),
+        postalCode: Joi.string(),
         gerkMID: Joi.string(),
     });
 

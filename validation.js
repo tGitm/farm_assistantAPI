@@ -9,7 +9,7 @@ const registerValidation = (data) => {
         password: Joi.string().min(6).required(),
         address: Joi.string(),
         post: Joi.string(),
-        postalCode: Joi.string(),
+        postal_code: Joi.string(),
         gerkMID: Joi.string(),
     });
 

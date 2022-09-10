@@ -16,16 +16,7 @@ router.get('/get-geometry/:id', async (req, res) => {
     const result = await Land.find({'properties.KMG_MID': parseInt(req.params.id)})  //, {geometry: 1})
     
     if (!result) return res.status(500).send({ok: false})
-    return res.send({ok: true, result})
-});
-
-// Get geometry data for specific land id
-router.get('/get-geometry/:id', async (req, res) => {
-    // console.log("req.params.id", typeof parseInt(req.params.id));
-    const result = await Land.find({'properties.KMG_MID': parseInt(req.params.id)}, {geometry: 1})
-
-    if (!result) return res.status(500).send({ok: false})
-    return res.send({ok: true, data: result})
+    return res.send(result)
 });
 
 module.exports = router;

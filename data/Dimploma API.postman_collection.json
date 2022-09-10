@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c44c7da9-3545-4000-9523-3f8f278bca45",
+		"_postman_id": "c7da6057-0c4d-4193-9bea-a1b3f6c503fa",
 		"name": "Dimploma API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14129257"
@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"first_name\": \"Tim\",\r\n    \"last_name\": \"Rus\",\r\n    \"email\": \"timrus.dev@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"raw": "{\r\n    \"first_name\": \"Dev\",\r\n    \"last_name\": \"Tim\",\r\n    \"email\": \"dev2@tim.com\",\r\n    \"password\": \"tim1234\",\r\n    \"address\": \"Globoko 10k\",\r\n    \"post\": \"Globoko\",\r\n    \"postal_code\": \"8254\",\r\n    \"gerkMID\": \"100307201\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,12 +21,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/user/register",
-					"protocol": "http",
+					"raw": "https://farmlogapi.herokuapp.com/api/user/register",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"farmlogapi",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"user",
@@ -43,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"first_name\": \"Dev\",\r\n    \"last_name\": \"Tim\",\r\n    \"email\": \"dev.tim@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"raw": "{\r\n    \"first_name\": \"Tim\",\r\n    \"last_name\": \"Rus\",\r\n    \"email\": \"timr@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,7 +74,38 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"timrus.dev@gmail.com\",\r\n    \"password\": \"tim123\"\r\n}",
+					"raw": "{\r\n    \"email\": \"dev@tim.com\",\r\n    \"password\": \"tim1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://farmlogapi.herokuapp.com/api/user/login",
+					"protocol": "https",
+					"host": [
+						"farmlogapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login localhost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"timr@gmail.com\",\r\n    \"password\": \"tim123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -97,6 +129,99 @@
 			"response": []
 		},
 		{
+			"name": "updateUser(edit)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Tim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/edit/62f3ba4934d28cae285d6062",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"edit",
+						"62f3ba4934d28cae285d6062"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserPassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Tim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/edit/62f3ba4934d28cae285d6062",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"edit",
+						"62f3ba4934d28cae285d6062"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserPassword localhost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Tim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/edit/62f3ba4934d28cae285d6062",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"edit",
+						"62f3ba4934d28cae285d6062"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getWorlkist",
 			"request": {
 				"method": "GET",
@@ -108,7 +233,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/worklist/getData",
+					"raw": "http://localhost:3000/api/chore/get/62f3dcdc5edae24a51f36516",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -116,8 +241,92 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"worklist",
-						"getData"
+						"chore",
+						"get",
+						"62f3dcdc5edae24a51f36516"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdjZWYwNTM5NGVhNWU5MDk0OGViODUiLCJpYXQiOjE2NTIzNjAwMTd9.yjY5ImfI5XQpNnfeKn-IzEUyWxe604Rt8FLPJylbPDg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/chore/get/62f3dcdc5edae24a51f36516",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chore",
+						"get",
+						"62f3dcdc5edae24a51f36516"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser localhost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdjZWYwNTM5NGVhNWU5MDk0OGViODUiLCJpYXQiOjE2NTIzNjAwMTd9.yjY5ImfI5XQpNnfeKn-IzEUyWxe604Rt8FLPJylbPDg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/chore/get/62f3dcdc5edae24a51f36516",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chore",
+						"get",
+						"62f3dcdc5edae24a51f36516"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getChores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdjZWYwNTM5NGVhNWU5MDk0OGViODUiLCJpYXQiOjE2NTIzNjAwMTd9.yjY5ImfI5XQpNnfeKn-IzEUyWxe604Rt8FLPJylbPDg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/chore/get-chores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chore",
+						"get-chores"
 					]
 				}
 			},
@@ -130,13 +339,13 @@
 				"header": [
 					{
 						"key": "auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmMxNjY0NDUwOWU4MDJiOGI0ODM4NDQiLCJpYXQiOjE2NTY4NDIxNzd9.MAoMgbd5Ou2OzehobS3esJdXeWef7tTfz6atyqSpQRI",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzEzNWFkOGVjZjFkYTNkMGQ2MmNjMjUiLCJpYXQiOjE2NjIyMTg1OTN9.-4Hgz6LyrEbHiQYr2b6XswUKYpHazGPWSpZ9vE3d-kc",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"first_name\": \"Tim\",\r\n    \"last_name\": \"Rus\",\r\n    \"email\": \"timrus1.dev@gmail.com\",\r\n    \"password\": \"tim123\",\r\n    \"phone\": \"070070070\",\r\n    \"gerkMID\": \"100328401\"\r\n}",
+					"raw": "{\r\n    \"user_id\": \"63135ad8ecf1da3d0d62cc25\",\r\n    \"land_id\": \"123456\",\r\n    \"work_title\": \"Obiranje jabolk\",\r\n    \"work_description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\r\n    \"accessories_used\": \"Lorem Ipsum 123547890\",\r\n    \"img\": \"traktor.jpg\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,16 +353,74 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/worklist/add-land-work",
-					"protocol": "http",
+					"raw": "https://farmlogapi.herokuapp.com/api/chore/add-chore",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"farmlogapi",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"api",
-						"worklist",
-						"add-land-work"
+						"chore",
+						"add-chore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lands",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzEzNWFkOGVjZjFkYTNkMGQ2MmNjMjUiLCJpYXQiOjE2NjI0ODU4NDJ9.XG3s0WQFAIjbHrqbN9U9kj3LEYBEOgw6HFNeNeBT8xQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://farmlogapi.herokuapp.com/api/get-lands",
+					"protocol": "https",
+					"host": [
+						"farmlogapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"get-lands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single-land",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzEzNWFkOGVjZjFkYTNkMGQ2MmNjMjUiLCJpYXQiOjE2NjI0ODU4NDJ9.XG3s0WQFAIjbHrqbN9U9kj3LEYBEOgw6HFNeNeBT8xQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://farmlogapi.herokuapp.com/api/get-geometry/100307201",
+					"protocol": "https",
+					"host": [
+						"farmlogapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"get-geometry",
+						"100307201"
 					]
 				}
 			},

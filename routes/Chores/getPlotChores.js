@@ -1,18 +1,19 @@
 const router = require('express').Router();
 const verify = require('../verifyToken');
 const Chore = require('../../model/Chores')
+const Land = require("../../model/Land");
 
-// Cant acces if user is not verified
-router.get('/get-chores', verify, async (req, res) => {
-    Chore.find().then((result) => {
-        res.send(result);
-    }).catch((err) => {
-        console.log(err);
-    })
+// Get all chores for one user
+router.get('/get-chores/:id', async (req, res) => {
+    const result = await Chore.find({'user_id': req.params.id})
+
+    if (!result) return res.status(500).send({ok: false})
+    return res.json({chores: result})
+
 });
 
 // get single worklist by its id
-router.get('/get/:id', verify, async (req, res) => {
+router.get('/get/:id', async (req, res) => {
     try {
         const chore = await Chore.findById(req.params.id);
         res.status(200).json(chore);

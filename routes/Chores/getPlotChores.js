@@ -8,7 +8,7 @@ router.get('/get-chores/:id', async (req, res) => {
     const result = await Chore.find({'user_id': req.params.id})
 
     if (!result) return res.status(500).send({ok: false})
-    return res.json({chores: result})
+    return res.json(result)
 
 });
 

@@ -42,7 +42,7 @@ router.put("/update-land-work/:id", verify, async (req, res) => {
 router.delete("/delete/:id", async (req, res) => {
     try {
         await Chores.remove({_id: req.params.id}).exec()
-        res.status(200).json("Chore has been deleted");
+        res.status(200).json({message: "Chore has been deleted"});
     } catch (err) {
         return res.status(500).json(err);
     }

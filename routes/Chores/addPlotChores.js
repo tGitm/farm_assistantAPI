@@ -1,15 +1,17 @@
 const router = require('express').Router();
 const verify = require('../verifyToken');
-const Worklist = require('../../model/Chores')
+const Chores = require('../../model/Chores')
+const mongodb = require("mongodb");
+const {ObjectId} = require("mongodb");
 
 // Cant post if user is not verified
 
 // add new work on land
 router.post('/add-chore', verify, async (req, res, next) => {
-    const newWork = new Worklist(req.body);
+    const newChore = new Chores(req.body);
     try {
-        const savedWork = await newWork.save();
-        res.send({worklist_id: newWork._id, chore: newWork})
+        const savedWork = await newChore.save();
+        res.send({worklist_id: newChore._id, chore: newChore})
         res.status(200).json(savedWork);
     } catch(e) {
         res.status(500).json(e);
@@ -35,5 +37,13 @@ router.put("/update-land-work/:id", verify, async (req, res) => {
 */
 
 // delete work for specific land with user_id
+router.delete("/delete/:id", async (req, res) => {
+    try {
+        await Chores.remove({_id: req.params.id}).exec()
+        res.status(200).json("Chore has been deleted");
+    } catch (err) {
+        return res.status(500).json(err);
+    }
+});
 
 module.exports = router;

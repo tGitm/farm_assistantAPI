@@ -18,10 +18,6 @@ router.post('/add-chore', verify, async (req, res, next) => {
     }
 });
 
-
-
-
-/*
 // update work on specific land with user_id
 router.put("/update-land-work/:id", verify, async (req, res) => {
     try {
@@ -36,7 +32,7 @@ router.put("/update-land-work/:id", verify, async (req, res) => {
         res.status(500).json(e);
     }
 });
-*/
+  
 
 // delete work for specific land with user_id
 router.delete("/delete/:id", async (req, res) => {

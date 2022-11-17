@@ -1,39 +1,43 @@
 const router = require('express').Router();
 const verify = require('../verifyToken');
-const Worklist = require('../../model/Chores')
+const Chores = require('../../model/Chores')
+const mongodb = require("mongodb");
+const {ObjectId} = require("mongodb");
 
 // Cant post if user is not verified
 
 // add new work on land
-router.post('/add-chore', verify, async (req, res, next) => {
-    const newWork = new Worklist(req.body);
+router.post('/add-chore', async (req, res, next) => {
+    const newChore = new Chores(req.body);
     try {
-        const savedWork = await newWork.save();
-        res.send({worklist_id: newWork._id, chore: newWork})
-        res.status(200).json(savedWork);
+        const savedWork = await newChore.save();
+        return res.status(200).json({worklist_id: savedWork._id, chore: savedWork})
+        //res.status(200).json(savedWork);
     } catch(e) {
-        res.status(500).json(e);
+        return res.status(500).json(e);
     }
 });
 
-
-/*
 // update work on specific land with user_id
-router.put("/update-land-work/:id", verify, async (req, res) => {
+router.put("/update-land-work/:id", async (req, res) => {
     try {
-        const work = await Worklist.findById(req.params.id);
-        if (work.user_id === req.body.user_id) {
-            await work.updateOne({ $set: req.body });
-            res.status(200).json("work has been updated");
-        } else {
-            res.status(403).json("you can update only your work");
-        }
+        const work = await Chores.findById(req.params.id);
+        await work.updateOne({ $set: req.body });
+        return res.status(200).json({message: "chore updated", chore: work});
     } catch (e) {
-        res.status(500).json(e);
+        return res.status(500).json(e);
     }
 });
-*/
+
 
 // delete work for specific land with user_id
+router.delete("/delete/:id", async (req, res) => {
+    try {
+        await Chores.remove({_id: req.params.id}).exec()
+        return res.status(200).json({message: "Chore has been deleted"});
+    } catch (err) {
+        return res.status(500).json(err);
+    }
+});
 
 module.exports = router;

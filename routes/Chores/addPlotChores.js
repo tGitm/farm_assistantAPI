@@ -21,14 +21,13 @@ router.post('/add-chore', async (req, res, next) => {
 // update work on specific land with user_id
 router.put("/update-land-work/:id", async (req, res) => {
     try {
-        const work = await Chores.findById(req.params.id);
-        await work.updateOne({ $set: req.body });
-        return res.status(200).json({message: "chore updated", chore: work});
+        const chore = await Chores.findById(req.params.id);
+        await chore.updateOne({ $set: req.body });
+        return res.status(200).json({message: "chore updated", chore});
     } catch (e) {
         return res.status(500).json(e);
     }
 });
-
 
 // delete work for specific land with user_id
 router.delete("/delete/:id", async (req, res) => {

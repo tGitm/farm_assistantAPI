@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>FarmLog API</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div style="margin:50px;">
+    
+    <div class="jumbotron"  style="padding:40px;">
+      <h1>FarmLog API</h1>
+      <h3>Dobrodošli v API-ju aplikacije FarmLog!</h3>
+      <p> Aplikacija je namenjena lažjemu arhiviranju in pregledovanju opravljenega dela na kmetijskih zemljiščih zemljiščih.</p>
+      <p style="font-size: 14;">Razvil: <a href="https://tgitm.github.io/timrus/" target="_blank">Tim Rus ©2022</a></p>
+    
+    </div>
+
+    <div class="jumbotron"  style="padding:40px;">
+        <h3><b>User Routes</b></h3>
+        <ul style="font-size: 16px !important;">
+            <li><p>Registracija novega uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/register</li>
+            <li><p>Prijava uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/login</li>
+            <li><p>Pridobi uporabnika -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/user/:id</li>
+            <li><p>Posodobi uporabnika -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/user/edit/:id</li>
+        </ul>
+    </div>
+    
+    <div class="jumbotron"  style="padding:40px;">
+        <h3><b>Land Routes</b></h3>
+        <ul style="font-size: 16px !important;">
+            <li><p>Pridobi vsa zemljišča -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/get-lands</li>
+            <li><p>Pridobi vsa zemljišča po MID -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/get-geometry/:id</li>
+        </ul>
+    </div>
+
+    <div class="jumbotron"  style="padding:40px;">
+        <h3><b>Chore Routes</b></h3>
+        <ul style="font-size: 16px !important;">
+            <li><p>Pridobi vsa opravila uporabnika -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/chore/get-chores/:id</li>
+            <li><p>Pridobi opravilo preko id-ja -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/chore/get/:id</li>
+            <li><p>Posodobi določeno opravilo -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/chore/update-land-work/:id</li>
+            <li><p>Odstrani zemljišče -> <span style="color: #EA5D54; font-weight: 600;">DELETE</span> https://farmlog-api.vercel.app/api/chore/delete/:id</li>
+        </ul>
+    </div>
+
+  </div>
+</body>
+</html>

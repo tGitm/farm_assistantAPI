@@ -4,6 +4,10 @@ const app = express();
 const mongoose = require('mongoose');
 
 
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+ });
+
 // Importing routes
 const getChoreRoute = require('./routes/Chores/getPlotChores');
 const addChoreRoute = require('./routes/Chores/addPlotChores');
@@ -25,10 +29,6 @@ app.use('/api/user', userActions);
 app.use('/api/chore', getChoreRoute);
 app.use('/api/chore', addChoreRoute);
 app.use('/api', getLand);
-
-app.get("/", (req, res) => {
-   res.send("Farmlog API");
-});
 
 // used for generating secret jwt token
 // console.log(require('crypto').randomBytes(64).toString('hex'))

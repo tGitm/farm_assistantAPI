@@ -20,10 +20,47 @@
     <div class="jumbotron"  style="padding:40px;">
         <h3><b>User Routes</b></h3>
         <ul style="font-size: 16px !important;">
-            <li><p>Registracija novega uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/register</li>
-            <li><p>Prijava uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/login</li>
+            <li><p>Registracija novega uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/register <br>
+              <p style="font-size: 16px;">Request body:</p>
+              <div class="code_snippet" style="width: 30%;">
+                <pre>
+                    {
+                      "first_name": "Janez",
+                      "last_name": "Novak",
+                      "email": "janezn@gmail.com",
+                      "password": "janez123",
+                      "address": "Naslov",
+                      "post": "Pošta",
+                      "postal_code": "1000",
+                      "gerkMID": "110357609"
+                    }
+                </pre>
+              </div>
+            </li>
+            <li><p>Prijava uporabnika -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/login<br>
+              <p style="font-size: 16px;">Request body:</p>
+              <div class="code_snippet" style="width: 30%;">
+                <pre>
+                    {
+                      "email": "janezn@gmail.com",
+                      "password": "janez123"
+                    }
+                </pre>
+              </div>
+            
+            </li>
             <li><p>Pridobi uporabnika -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/user/:id</li>
-            <li><p>Posodobi uporabnika -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/user/edit/:id</li>
+            <li><p>Posodobi uporabnika -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/user/edit/:id <br>
+              <p style="font-size: 16px;">Request body:</p>
+              <div class="code_snippet" style="width: 30%;">
+                <pre>
+                  Request mora vsebovati vsaj eden key, value par.
+                    {
+                      "postal_code": "1234"
+                    }
+                </pre>
+              </div>
+            </li>
         </ul>
     </div>
     
@@ -38,9 +75,35 @@
     <div class="jumbotron"  style="padding:40px;">
         <h3><b>Chore Routes</b></h3>
         <ul style="font-size: 16px !important;">
+          <li><p>Dodajanje novega opravila -> <span style="color: #F9C035; font-weight: 600;">POST</span> https://farmlog-api.vercel.app/api/user/register <br>
+            <p style="font-size: 16px;">Request body:</p>
+            <div class="code_snippet" style="width: 30%;">
+              <pre>
+                  {
+                    "user_id": "634bec234d2f0cc5z456e890f",
+                    "land_id": "12345678",
+                    "work_title": "Lorem ipsum Test Test",
+                    "work_description": "Lorem Ipsum is ...",
+                    "accessories_used": "Lorem Ipsum 123547890",
+                    "img": "test.jpg"
+                  }
+              </pre>
+            </div>
+          
+          </li>
             <li><p>Pridobi vsa opravila uporabnika -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/chore/get-chores/:id</li>
             <li><p>Pridobi opravilo preko id-ja -> <span style="color: #4BC97D; font-weight: 600;">GET</span> https://farmlog-api.vercel.app/api/chore/get/:id</li>
-            <li><p>Posodobi določeno opravilo -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/chore/update-land-work/:id</li>
+            <li><p>Posodobi določeno opravilo -> <span style="color: #549FEB; font-weight: 600;">PUT</span> https://farmlog-api.vercel.app/api/chore/update-land-work/:id <br>
+              <p style="font-size: 16px;">Request body:</p>
+              <div class="code_snippet" style="width: 30%;">
+                <pre>
+                  Request mora vsebovati vsaj eden key, value par.
+                    {
+                      "work_title": "Košnja trave123"
+                    }
+                </pre>
+              </div>
+            </li>
             <li><p>Odstrani zemljišče -> <span style="color: #EA5D54; font-weight: 600;">DELETE</span> https://farmlog-api.vercel.app/api/chore/delete/:id</li>
         </ul>
     </div>

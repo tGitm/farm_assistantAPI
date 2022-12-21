@@ -42,6 +42,7 @@ router.post('/add-chore', upload.single('choreImage'), async (req, res, next) =>
         work_title: req.body.work_title,
         work_description: req.body.work_description,
         accessories_used: req.body.accessories_used,
+        date: req.body.date,
         img: req.file.path
     });
     try {

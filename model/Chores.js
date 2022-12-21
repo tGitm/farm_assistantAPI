@@ -20,17 +20,12 @@ const WorklistSchema = new mongoose.Schema(
         accessories_used: {
             type: String,
         },
-        /*date: {
-            type: Date,
-            default: Date.now
-        },*/
+        date: {
+            type: String
+        },
         img: {
           type: String,
         }
-        /*added_by_user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },*/
     },
     { timestamps: true }
 );

@@ -3,12 +3,47 @@ const verify = require('../verifyToken');
 const Chores = require('../../model/Chores')
 const mongodb = require("mongodb");
 const {ObjectId} = require("mongodb");
+const multer = require('multer');
 
-// Cant post if user is not verified
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+      cb(null, './uploads/');
+    },
+    filename: function(req, file, cb) {
+      cb(null, new Date().toISOString() + file.originalname);
+    }
+  });
+  
+  const fileFilter = (req, file, cb) => {
+    // reject a file
+    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+      cb(null, true);
+    } else {
+      cb(null, false);
+    }
+  };
+  
+  
+  const upload = multer({
+    storage: storage,
+    limits: {
+      fileSize: 1024 * 1024 * 5
+    },
+    fileFilter: fileFilter
+  });
 
-// add new work on land
-router.post('/add-chore', async (req, res, next) => {
-    const newChore = new Chores(req.body);
+  //const upload = multer({storage})
+
+// add new work on land 
+router.post('/add-chore', upload.single('choreImage'), async (req, res, next) => {
+    const newChore = new Chores({
+        user_id: req.body.user_id,
+        land_id: req.body.land_id,
+        work_title: req.body.work_title,
+        work_description: req.body.work_description,
+        accessories_used: req.body.accessories_used,
+        img: req.file.path
+    });
     try {
         const savedWork = await newChore.save();
         return res.status(200).json({worklist_id: savedWork._id, chore: savedWork})
@@ -17,7 +52,6 @@ router.post('/add-chore', async (req, res, next) => {
         return res.status(500).json(e);
     }
 });
-
 
 // update work on specific land with user_id
 router.put("/update-land-work/:id", async (req, res) => {

@@ -1,22 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const path = require('path');
-const fs = require("fs");
-const multer = require('multer');
-const Grid = require("gridfs-stream")
 const connection = require('./db.js')
-var imageModel = require('./model/Image')
  
+// MiddleWare
+app.use(express.json()); // now we can send post request
+app.use('/uploads', express.static('uploads'))
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');
  });
 
-
-// MiddleWare
-app.use(express.json()); // now we can send post request
-app.use('/uploads', express.static('uploads'))
 
 // Importing routes
 const getChoreRoute = require('./routes/Chores/getPlotChores');

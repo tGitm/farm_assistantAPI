@@ -34,7 +34,7 @@ const storage = multer.diskStorage({
   //const upload = multer({storage})
 
 // add new work on land 
-router.post('/add-chore', upload.single('file'), async (req, res, next) => {
+router.post('/add-chore', upload.single('choreImage'), async (req, res, next) => {
     const newChore = new Chores({
         user_id: req.body.user_id,
         land_id: req.body.land_id,

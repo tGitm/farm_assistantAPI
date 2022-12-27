@@ -5,6 +5,7 @@ const mongodb = require("mongodb");
 const {ObjectId} = require("mongodb");
 const multer = require('multer');
 
+/*
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
       cb(null, 'uploads/');
@@ -53,6 +54,49 @@ router.post('/add-chore', upload.single('file'), async (req, res, next) => {
     } catch(e) {
         return res.status(500).json(e);
     }
+});
+
+
+// add new work on land 
+router.post('/add-chore', upload.single('file'), async (req, res, next) => {
+  const newChore = new Chores({
+      user_id: req.body.user_id,
+      land_id: req.body.land_id,
+      work_title: req.body.work_title,
+      work_description: req.body.work_description,
+      accessories_used: req.body.accessories_used,
+      date: req.body.date,
+      img: req.file.path
+  });
+  
+  try {
+      const savedWork = await newChore.save();
+      return res.status(200).json({worklist_id: savedWork._id, chore: savedWork})
+      //res.status(200).json(savedWork);
+  } catch(e) {
+      return res.status(500).json(e);
+  }
+});
+*/
+
+// add new work on land 
+router.post('/add-chore', async (req, res, next) => {
+  const newChore = new Chores({
+      user_id: req.body.user_id,
+      land_id: req.body.land_id,
+      work_title: req.body.work_title,
+      work_description: req.body.work_description,
+      accessories_used: req.body.accessories_used,
+      date: req.body.date
+  });
+  
+  try {
+      const savedWork = await newChore.save();
+      return res.status(200).json({worklist_id: savedWork._id, chore: savedWork})
+      //res.status(200).json(savedWork);
+  } catch(e) {
+      return res.status(500).json(e);
+  }
 });
 
 // update work on specific land with user_id

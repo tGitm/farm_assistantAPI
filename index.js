@@ -6,7 +6,7 @@ const path = require('path')
  
 // MiddleWare
 app.use(express.json()); // now we can send post request
-app.use('/uploads', express.static(__dirname + '/uploads'))
+app.use('/uploads', express.static('/uploads'))
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');

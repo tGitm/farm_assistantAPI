@@ -2,10 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const connection = require('./db.js')
+const path = require('path')
  
 // MiddleWare
 app.use(express.json()); // now we can send post request
-app.use('/uploads', express.static('uploads'))
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');

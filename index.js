@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 const connection = require('./db.js')
 const path = require('path')
+var cors = require('cors')
  
 // MiddleWare
+app.use(cors())
 app.use(express.json()); // now we can send post request
-app.use('/uploads', express.static('/uploads'))
+app.use('/uploads', express.static('./uploads'))
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');

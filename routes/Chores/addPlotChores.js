@@ -42,10 +42,9 @@ router.post('/add-chore', upload.single('file'), async (req, res, next) => {
         work_description: req.body.work_description,
         accessories_used: req.body.accessories_used,
         date: req.body.date,
-        img: req.body.file
+        img: req.file.path
     });
-
-    console.log(req.file)
+    
 
     try {
         const savedWork = await newChore.save();

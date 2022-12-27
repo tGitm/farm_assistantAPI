@@ -23,7 +23,6 @@ const storage = multer.diskStorage({
     }
   };
   
-  
   const upload = multer({
     storage: storage,
     limits: {
@@ -45,6 +44,8 @@ router.post('/add-chore', upload.single('file'), async (req, res, next) => {
         date: req.body.date,
         img: req.file.path
     });
+
+    console.log(req.file)
 
     try {
         const savedWork = await newChore.save();
